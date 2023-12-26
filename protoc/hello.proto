@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "./"; //auto generated files installed here
+
+service Example{
+      rpc MemoryRequirments(RequirmentsRequest) returns (SupplyResponse);
+      rpc ServerReply(HelloRequest) returns (HelloResponse);
+} 
+
+
+message HelloRequest {
+      string SomeString =1;
+}
+
+message HelloResponse{
+      string Reply=1;
+}
+message RequirmentsRequest{
+      string Type=1;
+      int32 Size=2;
+}
+
+message SupplyResponse{
+      int32 SizeAvailable=1;
+}
